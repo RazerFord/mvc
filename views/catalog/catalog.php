@@ -1,5 +1,6 @@
 <?php include_once(ROOT . '\views\layouts\header.php'); ?>
 
+
 <section>
 	<div class="container">
 		<div class="row">
@@ -21,6 +22,8 @@
 						<?php endforeach; ?>
 					</div>
 					<!--/category-products-->
+
+
 				</div>
 			</div>
 
@@ -49,7 +52,7 @@
 											<a href="#2" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 										</div>
 										<?php if ($product['is_new']) : ?>
-											'<img src="/template/images/home/new.png" class="new" alt="">';
+											<img src="/template/images/home/new.png" class="new" alt="">
 										<?php endif; ?>
 									</div>
 								</div>

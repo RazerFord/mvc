@@ -11,9 +11,22 @@ class CatalogController
         $categories = Category::getCategoryList();
 
         $latestProducts = array();
-        $latestProducts = Product::getLatesProducts(12);
+        $latestProducts = Product::getLatesProducts();
 
-        require_once(ROOT . '/views/catalog/index.php');
+        require_once(ROOT . '/views/catalog/catalog.php');
+
+        return true;
+    }
+
+    public function actionCategory($categoryId)
+    {
+        $categories = array();
+        $categories = Category::getCategoryList();
+
+        $categoryItem = array();
+        $categoryItem = Product::getProductListByCategory($categoryId);
+
+        require_once(ROOT . '/views/catalog/category.php');
 
         return true;
     }
