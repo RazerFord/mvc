@@ -82,4 +82,14 @@ class User
         $_SESSION['user'] = $userId;
     }
 
+    public static function checkLogged()
+    {
+        session_start();
+
+        if (isset($_SESSION['user'])) {
+            return $_SESSION['user'];
+        }
+
+        header("Location: /user/login");
+    }
 }
