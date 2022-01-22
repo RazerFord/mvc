@@ -1,8 +1,5 @@
 <?php
 
-include_once(ROOT . '\models\Category.php');
-include_once(ROOT . '\models\Product.php');
-
 class ProductController
 {
     public function actionView($productId)
@@ -15,12 +12,6 @@ class ProductController
 
         require_once(ROOT . '\views\product\view.php');
 
-        return true;
-    }
-
-    public function actionList()
-    {
-        echo 'ProductController actionList';
         return true;
     }
 }
