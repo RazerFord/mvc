@@ -93,9 +93,12 @@
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
                                 <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Корзина</a></li>
-                                <li><a href="/cabinet/"><i class="fa fa-user"></i> Личный кабинет</a></li>
-                                <li><a href="/user/login/"><i class="fa fa-lock"></i> Вход</a></li>
-                                <li><a href="/user/logout/"><i class="fa fa-unlock"></i> Выход</a></li>
+                                <?php if (User::isGuest()) : ?>
+                                    <li><a href="/user/login/"><i class="fa fa-lock"></i> Вход</a></li>
+                                <?php else : ?>
+                                    <li><a href="/cabinet/"><i class="fa fa-user"></i> Личный кабинет</a></li>
+                                    <li><a href="/user/logout/"><i class="fa fa-unlock"></i> Выход</a></li>
+                                <?php endif; ?>
                             </ul>
                         </div>
                     </div>
