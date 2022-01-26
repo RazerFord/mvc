@@ -12,8 +12,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a href="/category/<?php echo $category['id']; ?>" 
-                                        class="<?php if ($categoryId == $category['id']) echo 'btn active'; ?>">
+                                        <a href="/category/<?php echo $category['id']; ?>" class="<?php if ($categoryId == $category['id']) echo 'btn active'; ?>">
                                             <?php echo $category['name']; ?>
                                         </a>
                                     </h4>
@@ -47,7 +46,7 @@
                                                     <?php echo $product['name']; ?>
                                                 </a>
                                             </p>
-                                            <a href="#2" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                            <a href="/cart/add/<?php echo $product['id']; ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
                                         <?php if ($product['is_new']) : ?>
                                             <img src="/template/images/home/new.png" class="new" alt="">
