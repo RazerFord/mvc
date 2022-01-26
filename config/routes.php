@@ -22,5 +22,8 @@ return [
     'cart' => 'cart/index',
 
     'contacts' => 'site/contact',
+
+    'admin' => 'admin/index',
+
     '' => 'site/index',
 ];
