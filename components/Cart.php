@@ -56,4 +56,16 @@ class cart
 
         return $total;
     }
+
+    public static function deleteProduct($id)
+    {
+        $products = false;
+
+        $products = SELF::getProducts();
+
+        if (is_array($products)) {
+            unset($products[$id]);
+            $_SESSION['products'] = $products;
+        };
+    }
 }

@@ -16,8 +16,9 @@ return [
     'user/login' => 'user/login',
     'user/logout' => 'user/logout',
 
-    'cart' => 'cart/index',
     'cart/add/([0-9]+)' => 'cart/add/$1',
+    'cart/delete/([0-9]+)' => 'cart/delete/$1',
+    'cart' => 'cart/index',
 
     'contacts' => 'site/contact',
     '' => 'site/index',

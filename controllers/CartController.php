@@ -20,12 +20,20 @@ class CartController
         if ($productsInCart) {
             $productsIds = array_keys($productsInCart);
             $products = Product::getProductByIds($productsIds);
-            
+
             $totalPrice = Cart::getTotalPrice($products);
         }
 
         require_once(ROOT . '/views/cart/index.php');
 
         return true;
+    }
+
+    public function actionDelete($id)
+    {
+        Cart::deleteProduct($id);
+
+        $referrer = $_SERVER['HTTP_REFERER'];
+        header("Location: $referrer");
     }
 }
