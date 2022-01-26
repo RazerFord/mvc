@@ -16,5 +16,6 @@ return [
     'user/login' => 'user/login',
     'user/logout' => 'user/logout',
 
+    'contacts' => 'site/contact',
     '' => 'site/index',
 ];

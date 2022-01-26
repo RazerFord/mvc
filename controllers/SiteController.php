@@ -15,4 +15,12 @@ class SiteController
 
         return true;
     }
+
+    public function actionContact()
+    {
+        
+        require_once(ROOT . '/views/contact/contact.php');
+
+        return true;
+    }
 }
