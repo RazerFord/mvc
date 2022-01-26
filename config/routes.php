@@ -9,6 +9,7 @@ return [
 
     'category/([0-9]+)' => 'catalog/category/$1',
 
+    'cabinet/edit' => 'cabinet/edit',
     'cabinet' => 'cabinet/index',
 
     'user/register' => 'user/register',

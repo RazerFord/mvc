@@ -97,4 +97,36 @@ class User
         }
         return true;
     }
+
+    public static function getUserById($id)
+    {
+        if ($id) {
+            $db = Db::getConnection();
+
+            $sql = 'SELECT * FROM user WHERE id=:id';
+
+            $result = $db->prepare($sql);
+            $result->bindParam(':id', $id, PDO::PARAM_INT);
+
+            $result->setFetchMode(PDO::FETCH_ASSOC);
+            $result->execute();
+
+            return $result->fetch();
+        }
+    }
+
+    public static function edit($id, $name, $password)
+    {
+        $db = Db::getConnection();
+
+        $sql = "UPDATE user
+        SET name=:name, password=:password
+        WHERE id=:id";
+
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        $result->bindParam(':name', $name, PDO::PARAM_STR);
+        $result->bindParam(':password', $password, PDO::PARAM_STR);
+        return $result->execute();
+    }
 }
