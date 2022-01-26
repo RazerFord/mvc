@@ -68,4 +68,11 @@ class cart
             $_SESSION['products'] = $products;
         };
     }
+
+    public static function clear()
+    {
+        if (isset($_SESSION['products'])) {
+            unset($_SESSION['products']);
+        }
+    }
 }

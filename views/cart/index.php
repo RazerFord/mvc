@@ -45,6 +45,7 @@
                 </table>
             </div>
             <p>Итого: $<?php echo $totalPrice; ?></p>
+            <a href="/cart/checkout/"><input type="button" class="btn btn-primary" value="Оформить заказ"></a>
         <?php endif; ?>
     </div>
 </section>

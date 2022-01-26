@@ -143,6 +143,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="/contacts/">Контакты</a></li>
+                                <li><a href="/cart/checkout/">Оформить заказ</a></li>
                             </ul>
                         </div>
                     </div>

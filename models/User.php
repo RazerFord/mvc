@@ -129,4 +129,9 @@ class User
         $result->bindParam(':password', $password, PDO::PARAM_STR);
         return $result->execute();
     }
+
+    public static function checkPhone($phone)
+    {
+        return !empty($phone) && intval($phone);
+    }
 }
